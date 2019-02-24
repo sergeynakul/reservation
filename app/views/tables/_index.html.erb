@@ -1,0 +1,8 @@
+<h2>Tables</h2>
+<% @restaurant.tables.each do |table| next if table.id.nil? %>
+  <p><%= table.id %>
+  | <%= link_to 'Show', restaurant_table_path(restaurant_id: @restaurant.id, id: table.id) %> 
+  | <%= link_to 'Edit', edit_restaurant_table_path(restaurant_id: @restaurant.id, id: table.id) %> 
+  | <%= link_to 'Destroy', [table.restaurant, table], method: :delete, data: { confirm: 'Are you sure?' } %>
+  </p>
+<% end %>

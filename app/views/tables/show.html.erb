@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Table:</strong>
+  <%= @table.id %>
+</p>
+
+<%= render 'bookings/index' %>
+<%= render 'bookings/new' %>
+
+<%= link_to 'Back', @restaurant %>
